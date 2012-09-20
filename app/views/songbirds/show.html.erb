@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @songbird.title %>
+</p>
+
+<p>
+  <b>Song:</b>
+  <%= @songbird.song %>
+</p>
+
+
+<%= link_to 'Edit', edit_songbird_path(@songbird) %> |
+<%= link_to 'Back', songbirds_path %>

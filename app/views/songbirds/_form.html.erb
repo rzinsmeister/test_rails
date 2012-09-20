@@ -1,0 +1,25 @@
+<%= form_for(@songbird) do |f| %>
+  <% if @songbird.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@songbird.errors.count, "error") %> prohibited this songbird from being saved:</h2>
+
+      <ul>
+      <% @songbird.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :song %><br />
+    <%= f.text_area :song %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
